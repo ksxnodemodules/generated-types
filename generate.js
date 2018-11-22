@@ -10,7 +10,7 @@ const codestr = x => mkstr(String.fromCharCode(x))
 const union = iterable => Array.from(iterable).join(' | ')
 const declare = (name, definition) => `export type ${name} = ${definition};`
 
-const ascii = Array.from(iter.range(255))
+const ascii = Array.from(iter.range(1 << 8))
 const lowerCaseAlphabetCodes = iter.range({ start: 'a'.charCodeAt(), end: 'z'.charCodeAt() + 1 })
 const upperCaseAlphabetCodes = iter.range({ start: 'A'.charCodeAt(), end: 'Z'.charCodeAt() + 1 })
 
